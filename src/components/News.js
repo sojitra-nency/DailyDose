@@ -75,11 +75,11 @@ export class News extends Component {
     
     return (
       <div className="container my-3 text-center">
-        <h2 className="text-center"> DailyDose - Top Headlines</h2>
+        <h2 className="text-center" style={{margin: "35px 0px"}}> DailyDose - Top Headlines</h2>
         {this.state.loading && <Spinner/>}
         <div className="row">
         {!this.state.loading && this.state.articles.map((element)=>{
-            return <div className="col-md-3 mx-4 my-2" key={element.url}>
+            return <div className="col-md-4" key={element.url}>
                 <NewsItem title={element.title?element.title.slice(0,45):""} description={element.description?element.description.slice(0,95):""} imageUrl={element.urlToImage} newsUrl={element.url}/>
                 </div>
         })}   
