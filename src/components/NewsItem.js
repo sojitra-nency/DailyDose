@@ -1,9 +1,16 @@
-import React, { Component } from 'react'
+// import React, { Component } from 'react'
+// In functional component
+import React from 'react'
 import {Link} from 'react-router-dom';
 
-export class NewsItem extends Component {
-  render() {
-    let {title, description, imageUrl, newsUrl, author, date, source} = this.props; 
+//uncomment for class component
+// export class NewsItem extends Component {
+  // In functional component
+  const NewsItem = (props) => {
+    //uncomment for class component
+  // render() {
+    // let {title, description, imageUrl, newsUrl, author, date, source} = this.props;
+    let {title, description, imageUrl, newsUrl, author, date, source} = props; 
     return (
       <div>
         <div className="card">
@@ -21,7 +28,8 @@ export class NewsItem extends Component {
         </div>
       </div>
     )
-  }
+    //uncomment for class component
+  // }
 }
 
 export default NewsItem
